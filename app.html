@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>RoyMania</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginRegister">
+            <!-- LOGIN SCREEN -->
+            <div id="loginScreen">
+                <h1>👑 RoyMania</h1>
+                <input type="email" id="loginEmail" placeholder="Email" required />
+                <input type="password" id="loginPassword" placeholder="Password" required />
+                <button onclick="login()">Log In</button>
+                <button onclick="gotoRegister()">Register</button>
+            </div>
+
+            <!-- SIGNUP SCREEN -->
+            <div id="registerScreen">
+                <h1>👑 RoyMania</h1>
+                <input type="text" id="registerUsername" placeholder="Username" required />
+                <input type="email" id="registerEmail" placeholder="Email" required />
+                <input type="password" id="registerPassword" placeholder="Password" required />
+                <button onclick="gotoRegister()">Log In</button>
+                <button onclick="register()">Register</button>
+            </div>
+        </div>
+        
+
+        <!-- WELCOME SCREEN -->
+        <div id="appScreen">
+            <h1>🎉 Welcome to RoyMania!</h1>
+            <div class="success">Hello, <span id="userName">Adventurer</span>!</div>
+            <div>Gold: <span id="userRoydollar">0</span> 💰</div>
+            <button onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" style="display:none; text-align:center; padding:20px;">Loading...</div>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+</body>
+</html>
