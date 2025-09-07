@@ -1,22 +1,40 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Optional: prevents scrolling if content fits */
+}
 body {
     font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: white;
     text-align: center;
     padding: 50px 20px;
-    margin: 0;
 }
 .container {
-    max-width: 400px;
+    width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     background: rgba(0,0,0,0.2);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 30px;
     backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ✅ Magic centering trick */
+    z-index: 1000;
 }
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin: 10px 0;
+    font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 input {

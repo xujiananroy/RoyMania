@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <div class="container">
+    <!-- CHANGE DISPLAY TO NONE AT RELEASE-->
+    <div class="container" id="development">
+        <h1>This game is under development.</h1>
+        <h1>Please check back later!</h1>
+    </div>
+    <!-- CHANGE DISPLAY TO BLOCK AT RELEASE-->
+    <div class="container" id="app" style="display: none;">
         <div id="loginRegister">
             <!-- LOGIN SCREEN -->
             <div id="loginScreen">
@@ -40,7 +46,7 @@
     </div>
 
     <!-- LOADING -->
-    <div id="loading" style="display:none; text-align:center; padding:20px;">Loading...</div>
+    <div id="loading" style="display:none; text-align:center; padding:20px;">Connecting to server...</div>
 
     <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
